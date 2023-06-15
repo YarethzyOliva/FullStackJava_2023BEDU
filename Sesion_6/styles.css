@@ -1,0 +1,107 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: radial-gradient(to right, #02587a, #769bdf, #a1c4d4);
+}
+  
+.container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 20px;
+}
+  
+.column {
+    background-color: #f2f2f2;
+    padding: 20px;
+    text-align: center;
+}
+  
+img {
+    max-width: 100%;
+    height: auto;
+}
+  
+/* Estilos para pantallas de navegador */
+@media screen and (max-width: 768px) {
+    .title {
+        font-size: 45px;
+    }
+  
+    h2 {
+        font-size: 24px;
+    }
+  
+    .container {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+}
+  
+/* Estilos para pantallas móviles */
+@media screen and (max-width: 575px) {
+    header {
+        display: none;
+    }
+  
+    .container {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+  
+/* Estilos para el encabezado y la barra de navegación */
+header {
+    background-image: url("fondo-header.jpg");
+    background-size: cover; /* Ajustar tamaño de la imagen para cubrir completamente */
+    background-position: center;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+  
+.title {
+    font-size: 50px;
+    font-weight: bold;
+    color: white;
+    text-shadow:
+        0 0 10px #006400,
+        0 0 20px #006400,
+        0 0 30px #006400,
+        0 0 40px #006400;
+}
+
+.title::after {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: white;
+    text-shadow: none;
+    z-index: -1;
+}
+  
+.icon {
+    font-size: 30px;
+    margin-right: 10px;
+}
+  
+.menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex; /* Distribuir horizontalmente los elementos */
+}
+  
+.menu li {
+    margin-right: 10px;
+}
+  
+.menu li a {
+    color: white; /* Cambiar el color del texto a blanco */
+    text-decoration: none;
+    font-family: "Arial", sans-serif; /* Cambiar la fuente de letra */
+    font-size: 22px;
+    text-shadow: 2px 2px 4px black;
+}
